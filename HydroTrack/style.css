@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf7ff;
+    color: #17324d;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTENEDOR DE LAS PANTALLAS */
+
+.pantalla {
+    display: none;
+
+    width: 90%;
+    max-width: 400px;
+
+    min-height: 600px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* PANTALLA ACTIVA */
+
+.pantalla.activa {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ICONOS */
+
+.icono-agua {
+    font-size: 80px;
+
+    margin-bottom: 15px;
+}
+
+.icono-agua.pequeño {
+    font-size: 55px;
+}
+
+
+/* TITULOS */
+
+h1 {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+    color: #1597d4;
+}
+
+h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+    color: #1597d4;
+}
+
+.subtitulo {
+    color: #667788;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTONES */
+
+.boton {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #1597d4;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: #087bb4;
+}
+
+
+/* BOTON SECUNDARIO */
+
+.boton-secundario {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 12px;
+
+    border: 2px solid #1597d4;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #1597d4;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* BOTON VOLVER */
+
+.volver {
+    align-self: flex-start;
+
+    border: none;
+
+    background: transparent;
+
+    color: #1597d4;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+}
+
+
+/* CONTADOR */
+
+.contador {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 30px 0;
+}
+
+.contador span {
+    font-size: 50px;
+
+    font-weight: bold;
+
+    color: #1597d4;
+
+    min-width: 60px;
+}
+
+
+/* BOTONES + Y - */
+
+.boton-circular {
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #1597d4;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.boton-circular:hover {
+    background: #087bb4;
+}
+
+
+/* META */
+
+.meta {
+    color: #667788;
+
+    margin-bottom: 10px;
+}
+
+
+/* PROGRESO */
+
+.cantidad {
+    font-size: 25px;
+
+    margin: 20px 0;
+
+    font-weight: bold;
+}
+
+#vasosProgreso {
+    color: #1597d4;
+}
+
+
+/* BARRA */
+
+.barra {
+    width: 100%;
+
+    height: 25px;
+
+    background: #dcecf5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+
+    width: 0%;
+
+    background: #1597d4;
+
+    border-radius: 20px;
+
+    transition: width 0.4s;
+}
+
+
+/* MENSAJE */
+
+.mensaje {
+    margin-top: 20px;
+
+    color: #667788;
+
+    min-height: 25px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .pantalla {
+        min-height: 90vh;
+
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HidroTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <section id="inicio" class="pantalla activa">
+
+        <div class="icono-agua">💧</div>
+
+        <h1>HidroTrack</h1>
+
+        <p class="subtitulo">
+            Controla fácilmente cuánta agua tomas durante el día.
+        </p>
+
+        <button class="boton" onclick="mostrarPantalla('registro')">
+            Comenzar
+        </button>
+
+    </section>
+
+
+    <!-- PANTALLA DE REGISTRO -->
+    <section id="registro" class="pantalla">
+
+        <button class="volver" onclick="mostrarPantalla('inicio')">
+            ← Inicio
+        </button>
+
+        <div class="icono-agua pequeño">💧</div>
+
+        <h2>Registrar agua</h2>
+
+        <p>¿Cuántos vasos has tomado?</p>
+
+        <div class="contador">
+
+            <button class="boton-circular" onclick="disminuir()">
+                −
+            </button>
+
+            <span id="vasos">0</span>
+
+            <button class="boton-circular" onclick="aumentar()">
+                +
+            </button>
+
+        </div>
+
+        <p class="meta">
+            Meta diaria: 8 vasos
+        </p>
+
+        <button class="boton" onclick="mostrarPantalla('progreso')">
+            Ver mi progreso
+        </button>
+
+    </section>
+
+
+    <!-- PANTALLA DE PROGRESO -->
+    <section id="progreso" class="pantalla">
+
+        <button class="volver" onclick="mostrarPantalla('registro')">
+            ← Registrar
+        </button>
+
+        <div class="icono-agua pequeño">💧</div>
+
+        <h2>Mi progreso</h2>
+
+        <p class="cantidad">
+            <span id="vasosProgreso">0</span> / 8 vasos
+        </p>
+
+        <div class="barra">
+            <div id="barraProgreso" class="progreso"></div>
+        </div>
+
+        <p id="mensaje" class="mensaje">
+            ¡Vamos a comenzar!
+        </p>
+
+        <button class="boton" onclick="mostrarPantalla('registro')">
+            Registrar vaso
+        </button>
+
+        <button class="boton-secundario" onclick="reiniciar()">
+            Reiniciar día
+        </button>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
